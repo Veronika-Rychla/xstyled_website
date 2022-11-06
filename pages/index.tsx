@@ -1,11 +1,14 @@
-import { x } from "@xstyled/emotion";
-import { NextPage } from "next";
+import { NextPage } from 'next';
+
+import { Home } from './home/Home';
+import { Navbar } from 'components/Navbar';
 
 const Index: NextPage = () => {
   return (
-    <x.div>
-      this is homepage
-    </x.div>
+    <>
+      <Navbar />
+      <Home />;
+    </>
   );
 };
 
