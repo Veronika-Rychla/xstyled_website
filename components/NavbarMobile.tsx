@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { x } from '@xstyled/emotion';
 import { Container } from './Container';
 
 const NavMobile = (props: any) => (
   <x.div
-    display="flex"
+    display={{ _: 'flex', md: 'none' }}
     alignItems="center"
     justifyContent="center"
-    flexDirection="column"
-    w="100%"
+    position="fixed"
+    top={0}
+    left={0}
+    w="100vw"
+    h="64px"
     backgroundColor="#111624"
     {...props}
   />
@@ -17,18 +20,34 @@ const NavMobile = (props: any) => (
 const Logo = (props: any) => <x.img w="132px" h="32px" {...props} />;
 
 const MenuContainer = (props: any) => (
-  <x.div display={{ _: 'none', md: 'flex' }} {...props} />
+  <x.div
+    display="flex"
+    flexDirection="column"
+    position="fixed"
+    alignItems="center"
+    justifyContent="space-between"
+    top={64}
+    left={0}
+    h="calc(100vh - 64px)"
+    w="100vw"
+    bg="#111624"
+    pb="30px"
+    {...props}
+  />
 );
 
 const MenuButton = (props: any) => (
-  <x.button
+  <x.span
+    display="block"
+    textAlign="center"
     fontFamily="Inter"
     fontWeight="500"
     fontSize="16px"
     lineHeight="64px"
     backgroundColor="#111624"
     color="#00D8FF"
-    mx="16px"
+    w="100%"
+    cursor="pointer"
     textDecoration={{ _: 'none', hover: 'underline 4px #01FF97' }}
     {...props}
   />
@@ -38,27 +57,84 @@ const HamburgerBarWrapper = (props: any) => (
   <x.div
     display="flex"
     flexDirection="column"
-    justifyContent="right"
+    alignItems="flex-end"
+    justifyContent="center"
+    w="32px"
+    h="32px"
     {...props}
   />
 );
 
 const HamburgerBar = (props: any) => (
-  <x.div display="block" w="32px" h="2px" mx="2px" color="#7986AF" {...props} />
+  <x.div w="32px" h="2px" my="2px" bg="white" {...props} />
+);
+
+const HamburgerBarClose = (props: any) => (
+  <x.div
+    w="32px"
+    h="2px"
+    my="2px"
+    bg="white"
+    transform="translateY(0px) rotate(-45deg)"
+    {...props}
+  />
+);
+
+const ButtonsWrapper = (props: any) => (
+  <x.div display="flex" flexDirection="column" w="100%" {...props} />
+);
+
+export const ActionButton = (props: any) => (
+  <x.span
+    fontFamily="Inter"
+    fontWeight="600"
+    textAlign="center"
+    fontSize="16px"
+    lineHeight="64px"
+    backgroundColor="#01FF97"
+    color="#080C18"
+    w="200px"
+    h="64px"
+    px="26px"
+    {...props}
+  />
 );
 
 export const NavbarMobile = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClick = () => {
+    setIsOpen((value) => !value);
+  };
   return (
     <NavMobile>
-      <Container flexDirection="space-between">
+      <Container justifyContent="space-between">
         <Logo src="./images/logo-small.svg" />
-        <HamburgerBarWrapper>
-          <HamburgerBar />
-          <HamburgerBar w="24px" />
-          <HamburgerBar />
+        <HamburgerBarWrapper onClick={handleClick}>
+          {isOpen ? (
+            <>
+              <HamburgerBarClose />
+              <HamburgerBarClose transform="translateY(-5px) rotate(45deg)" />
+            </>
+          ) : (
+            <>
+              <HamburgerBar />
+              <HamburgerBar w="24px" />
+              <HamburgerBar />
+            </>
+          )}
         </HamburgerBarWrapper>
-        <MenuContainer></MenuContainer>
       </Container>
+      {isOpen && (
+        <MenuContainer>
+          <ButtonsWrapper>
+            <MenuButton>Objevuj</MenuButton>
+            <MenuButton>Nauč se</MenuButton>
+            <MenuButton>Otestuj</MenuButton>
+            <MenuButton>Pracuj</MenuButton>
+          </ButtonsWrapper>
+          <ActionButton>Pracuj v Reactu</ActionButton>
+        </MenuContainer>
+      )}
     </NavMobile>
   );
 };

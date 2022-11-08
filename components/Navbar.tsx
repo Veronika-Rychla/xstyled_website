@@ -6,10 +6,9 @@ import {
   MenuContainer,
   ActionButton,
 } from './NavbarParts';
-import React, { useState } from 'react';
+import React from 'react';
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true);
   return (
     <Nav>
       <Container justifyContent="space-between" margin="0 50px">

@@ -2,7 +2,7 @@ import { x } from '@xstyled/emotion';
 
 export const Nav = (props: any) => (
   <x.div
-    display="flex"
+    display={{ _: 'none', md: 'flex' }}
     alignItems="center"
     justifyContent="center"
     w="100%"
