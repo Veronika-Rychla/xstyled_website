@@ -23,7 +23,10 @@ export const MenuButton = (props: any) => (
     //color="#00D8FF"
     mx="16px"
     color={{ _: '#00D8FF', hover: '#E5E5E5' }}
-    textDecoration={{ _: 'none', hover: 'underline 4px #FF00C7' }}
+    textDecoration={{
+      _: 'none',
+      hover: 'underline 4px #FF00C7',
+    }}
     {...props}
   />
 );

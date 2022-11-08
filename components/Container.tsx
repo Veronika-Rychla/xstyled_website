@@ -7,6 +7,7 @@ export const Container = (props: any) => (
     maxWidth="1920px"
     alignItems="center"
     justifyContent="center"
+    px="30px"
     {...props}
   />
 );

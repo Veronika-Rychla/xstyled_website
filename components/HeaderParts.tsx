@@ -17,6 +17,7 @@ export const Heading = (props: any) => (
     fontWeight="300"
     fontSize="96px"
     color="#FFFFFF"
+    my="20px"
     {...props}
   />
 );
@@ -27,8 +28,9 @@ export const HeaderContent = (props: any) => (
     fontWeight="400"
     fontSize="20px"
     color="#7986AF"
-    w="50%"
+    w="60%"
     m="24px 0 0 0"
+    textAlign="center"
     {...props}
   />
 );

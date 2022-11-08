@@ -12,15 +12,20 @@ const Tag = (props: any) => (
     backgroundImage="gradient-to-r"
     gradientFrom="#00D8FF"
     gradientTo="#00FF94"
+    w="113px"
+    h="32px"
+    p="4px 12px"
     {...props}
   />
 );
 
-const Header = (props: any) => <x.h3 color="#00D8FF" {...props} />;
+const Header = (props: any) => <x.h3 color="#00D8FF" my="30px" {...props} />;
 
 const Text = (props: any) => <x.p color="#7986AF" {...props} />;
 
-const Link = (props: any) => <x.a color="#00D8FF" {...props} />;
+const Link = (props: any) => (
+  <x.a color="#00D8FF" lineHeight="40px" {...props} />
+);
 
 export const CardItem = ({ item }: any) => {
   return (

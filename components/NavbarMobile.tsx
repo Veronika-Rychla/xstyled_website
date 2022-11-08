@@ -34,22 +34,29 @@ const MenuButton = (props: any) => (
   />
 );
 
-const HamburgerBar = (props: any) => (
+const HamburgerBarWrapper = (props: any) => (
   <x.div
-    display="block"
-    w="32px"
-    h="16px"
-    mx="2px"
-    color="#7986AF"
+    display="flex"
+    flexDirection="column"
+    justifyContent="right"
     {...props}
   />
 );
 
-export const Navbar = () => {
+const HamburgerBar = (props: any) => (
+  <x.div display="block" w="32px" h="2px" mx="2px" color="#7986AF" {...props} />
+);
+
+export const NavbarMobile = () => {
   return (
     <NavMobile>
       <Container flexDirection="space-between">
-        <Logo src="./images/logo=small.svg" />
+        <Logo src="./images/logo-small.svg" />
+        <HamburgerBarWrapper>
+          <HamburgerBar />
+          <HamburgerBar w="24px" />
+          <HamburgerBar />
+        </HamburgerBarWrapper>
         <MenuContainer></MenuContainer>
       </Container>
     </NavMobile>

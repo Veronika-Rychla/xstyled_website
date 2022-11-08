@@ -31,6 +31,9 @@ export const HeaderContent = (props: any) => (
     fontWeight="400"
     fontSize="20px"
     color="#7986AF"
+    my="40px"
+    w="60%"
+    textAlign="center"
     {...props}
   />
 );

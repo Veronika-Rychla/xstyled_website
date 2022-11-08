@@ -5,6 +5,7 @@ import {
   Heading,
   HeaderContent,
   ItemWrapper,
+  CardsButton,
 } from './CardsParts';
 import { CardItem } from './CardItem';
 import { cardsContent } from '../constants/cards';
@@ -25,6 +26,7 @@ export const CardStories = () => {
             <CardItem item={card} key={card.heading} />
           ))}
         </ItemWrapper>
+        <CardsButton>Show more C2A</CardsButton>
       </Container>
     </CardsWrapper>
   );

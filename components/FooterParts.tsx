@@ -7,9 +7,12 @@ export const FooterWrapper = (props: any) => (
     justifyContent="center"
     w="100%"
     backgroundColor="#111624"
+    py="71px"
     {...props}
   />
 );
+
+export const Logo = (props: any) => <x.img w="132px" h="32px" py {...props} />;
 
 export const Copyright = (props: any) => (
   <x.p
@@ -30,5 +33,3 @@ export const Motto = (props: any) => (
     {...props}
   />
 );
-
-export const Logo = (props: any) => <x.img w="132px" h="32px" {...props} />;
