@@ -1,10 +1,11 @@
-import { ThemeProvider } from "@emotion/react";
-import { AnolisProvider } from "anolis-ui";
-import { AppProps } from "next/app";
-import Head from "next/head";
-import { FC, Fragment } from "react";
-import { theme } from "theme";
-import { customXstyledTheme } from "theme/xstyled";
+import { ThemeProvider } from '@emotion/react';
+import { defaultTheme, Preflight } from '@xstyled/emotion';
+import { AnolisProvider } from 'anolis-ui';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { FC, Fragment } from 'react';
+import { theme } from 'theme';
+import { customXstyledTheme } from 'theme/xstyled';
 
 const App: FC<AppProps> = ({ pageProps, Component }) => {
   return (

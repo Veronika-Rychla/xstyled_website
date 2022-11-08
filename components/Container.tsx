@@ -1,4 +1,4 @@
-import { x } from '@xstyled/styled-components';
+import { x } from '@xstyled/emotion';
 
 export const Container = (props: any) => (
   <x.div

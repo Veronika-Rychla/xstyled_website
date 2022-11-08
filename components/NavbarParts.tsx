@@ -1,4 +1,4 @@
-import { x } from '@xstyled/styled-components';
+import { x } from '@xstyled/emotion';
 
 export const Nav = (props: any) => (
   <x.div
@@ -20,12 +20,9 @@ export const MenuButton = (props: any) => (
     fontSize="16px"
     lineHeight="64px"
     backgroundColor="#111624"
-    color="#00D8FF"
+    //color="#00D8FF"
     mx="16px"
-    // color={{
-    //   // _: '#00D8FF',
-    //   hover: '#E5E5E5',
-    // }}
+    color={{ _: '#00D8FF', hover: '#E5E5E5' }}
     textDecoration={{ _: 'none', hover: 'underline 4px #FF00C7' }}
     {...props}
   />
