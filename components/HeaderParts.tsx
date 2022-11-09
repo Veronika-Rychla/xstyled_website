@@ -34,7 +34,7 @@ export const HeaderContent = (props: any) => (
     color="#7986AF"
     paddingTop="24px"
     paddingBottom="64px"
-    w="65%"
+    w={{ _: '100%', md: '65%' }}
     {...props}
   />
 );
@@ -43,17 +43,14 @@ export const HeaderButton = (props: any) => (
   <x.div
     fontFamily="Inter"
     fontWeight="600"
-    fontSize="24px"
+    fontSize={{ _: '16px', md: '24px' }}
     textAlign="center"
     backgroundColor="#00D8FF"
     color="#080C18"
-    // w={{ _: 186, md: 341 }}
-    // h={{ _: 24, md: 186 }}
-    w="341px"
-    h="78px"
-    lineHeight="78px"
+    w={{ _: '186px', md: '341px' }}
+    lineHeight={{ _: '43px', md: '78px' }}
     cursor="pointer"
-    marginBottom="96px"
+    marginBottom={{ _: '64px', md: '96px' }}
     {...props}
   />
 );

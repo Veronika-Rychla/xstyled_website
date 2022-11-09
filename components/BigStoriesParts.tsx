@@ -12,7 +12,12 @@ export const StoriesWrapper = (props: any) => (
 );
 
 export const ItemWrapper = (props: any) => (
-  <x.div display="flex" flexWrap="wrap" {...props} />
+  <x.div
+    display="flex"
+    flexWrap="wrap"
+    flexDirection={{ _: 'column', md: 'row' }}
+    {...props}
+  />
 );
 
 export const Heading = (props: any) => (
@@ -30,9 +35,10 @@ export const HeaderContent = (props: any) => (
     fontFamily="Inter"
     fontWeight="400"
     fontSize="20px"
+    lineHeight="28px"
     color="#7986AF"
     my="40px"
-    w="60%"
+    w={{ _: '100%', md: '65%' }}
     textAlign="center"
     {...props}
   />

@@ -12,17 +12,15 @@ import { BigStoryItem } from './BigStoryItem';
 export const BigStories = () => {
   return (
     <StoriesWrapper>
-      <Container flexDirection="column" py="96px">
+      <Container flexDirection="column" paddingBottom="128px">
         <Heading>Big Stories</Heading>
         <HeaderContent>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quod
-          odio commodi, obcaecati cum molestias reprehenderit delectus laborum
-          iusto molestiae magnam nisi. Minus expedita vel quibusdam non quos
-          doloremque fuga.
+          odio commodi, obcaecati cum molestias reprehenderit delectus.
         </HeaderContent>
         <ItemWrapper>
-          {storiesContent.map((card) => (
-            <BigStoryItem item={card} key={card.heading} />
+          {storiesContent.map((card, index) => (
+            <BigStoryItem item={card} key={index} />
           ))}
         </ItemWrapper>
       </Container>

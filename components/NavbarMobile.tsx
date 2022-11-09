@@ -86,6 +86,8 @@ const ButtonsWrapper = (props: any) => (
 
 export const ActionButton = (props: any) => (
   <x.span
+    display="inline-block"
+    cursor="pointer"
     fontFamily="Inter"
     fontWeight="600"
     textAlign="center"
@@ -93,9 +95,7 @@ export const ActionButton = (props: any) => (
     lineHeight="64px"
     backgroundColor="#01FF97"
     color="#080C18"
-    w="200px"
-    h="64px"
-    px="26px"
+    px="24px"
     {...props}
   />
 );

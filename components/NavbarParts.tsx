@@ -37,7 +37,11 @@ export const MenuButton = (props: any) => (
     mx="16px"
     cursor="pointer"
     color={{ _: '#00D8FF', hover: '#E5E5E5', active: '#E5E5E5' }}
-    borderBottom={{ hover: 'solid 4px #FF00C7', active: 'solid 4px #FF00C7' }}
+    borderBottom={{
+      _: 'solid 4px #111624',
+      hover: 'solid 4px #FF00C7',
+      active: 'solid 4px #FF00C7',
+    }}
     {...props}
   />
 );
