@@ -6,13 +6,16 @@ export const FooterWrapper = (props: any) => (
     alignItems="center"
     justifyContent="center"
     w="100%"
+    h="248px"
     backgroundColor="#111624"
-    py="71px"
+    py="70px 64px"
     {...props}
   />
 );
 
-export const Logo = (props: any) => <x.img w="132px" h="32px" py {...props} />;
+export const Logo = (props: any) => (
+  <x.img w="134px" h="32px" mb="24px" {...props} />
+);
 
 export const Copyright = (props: any) => (
   <x.p
@@ -20,6 +23,8 @@ export const Copyright = (props: any) => (
     fontFamily="Inter"
     fontWeight="500"
     fontSize="16px"
+    lineHeight="24px"
+    mb="16px"
     {...props}
   />
 );
@@ -30,6 +35,7 @@ export const Motto = (props: any) => (
     fontFamily="Inter"
     fontWeight="400"
     fontSize="16px"
+    lineHeight="24px"
     {...props}
   />
 );

@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <FooterWrapper>
       <Container flexDirection="column">
-        <Logo src="./images/logo.svg" />
+        <Logo src="./images/logo-small.svg" />
         <Copyright>© 2022 React.fun</Copyright>
         <Motto>Nauč se, objevuj a pracuj v Reactu</Motto>
       </Container>

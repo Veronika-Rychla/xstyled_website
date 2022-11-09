@@ -15,9 +15,11 @@ export const Heading = (props: any) => (
   <x.h1
     fontFamily="Inter"
     fontWeight="300"
-    fontSize="96px"
+    fontSize={{ _: 40, md: 96 }}
+    lineHeight="116px"
     color="#FFFFFF"
-    my="20px"
+    textAlign="center"
+    paddingTop="64px"
     {...props}
   />
 );
@@ -27,25 +29,31 @@ export const HeaderContent = (props: any) => (
     fontFamily="Inter"
     fontWeight="400"
     fontSize="20px"
-    color="#7986AF"
-    w="60%"
-    m="24px 0 0 0"
+    lineHeight="28px"
     textAlign="center"
+    color="#7986AF"
+    paddingTop="24px"
+    paddingBottom="64px"
+    w="65%"
     {...props}
   />
 );
 
 export const HeaderButton = (props: any) => (
-  <x.button
+  <x.div
     fontFamily="Inter"
     fontWeight="600"
     fontSize="24px"
+    textAlign="center"
     backgroundColor="#00D8FF"
     color="#080C18"
+    // w={{ _: 186, md: 341 }}
+    // h={{ _: 24, md: 186 }}
     w="341px"
     h="78px"
-    m="56px 0 96px 0"
-    lineHeight="64px"
+    lineHeight="78px"
+    cursor="pointer"
+    marginBottom="96px"
     {...props}
   />
 );
